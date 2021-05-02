@@ -28,4 +28,4 @@ jobs:
       working-directory: client
       run: |
           yarn 
-          quasar test --unit jest 
+          yarn test
