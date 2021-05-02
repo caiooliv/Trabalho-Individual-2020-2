@@ -8,6 +8,5 @@ COPY . .
 RUN yarn global add @quasar/cli
 RUN yarn
 
-RUN yarn dev
 
 
