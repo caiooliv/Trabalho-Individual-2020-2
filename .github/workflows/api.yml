@@ -38,13 +38,15 @@ jobs:
       run: |
           python manage.py migrate
           python manage.py test      
-    - name: Lint
-      working-directory: api
-      run: python3.9 -m flake8
+    
     - name: Upload to coverage
       uses: codecov/codecov-action@v1.0.5
       with:
         token: ${{ secrets.CODECOV_TOKEN }} 
         working-directory: api
         fail_ci_if_error: true
-      
+
+    - name: Lint
+      working-directory: api
+      run: python3.9 -m flake8
+          
