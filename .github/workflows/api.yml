@@ -28,7 +28,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-    - name: Install Dependencies
+    - name: Install Dependencies        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
       working-directory: api
       run: |
           python -m pip install --upgrade pip 
@@ -40,6 +40,5 @@ jobs:
           python manage.py test      
     - name: Lint
       working-directory: api
-      run: |
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+      run: python3.9 -m flake8
       
